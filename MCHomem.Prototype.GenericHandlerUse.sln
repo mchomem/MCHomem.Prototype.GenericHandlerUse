@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCHomem.Prototype.GenericHandlerUse.Site", "MCHomem.Prototype.GenericHandlerUse.Site\MCHomem.Prototype.GenericHandlerUse.Site.csproj", "{369B45FD-5C08-4A92-A25F-6A17571AA540}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCHomem.Prototype.GenericHandlerUse.Models", "MCHomem.Prototype.GenericHandlerUse.Models\MCHomem.Prototype.GenericHandlerUse.Models.csproj", "{CD51ED13-35E8-408D-AE16-6B07BEA233D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{369B45FD-5C08-4A92-A25F-6A17571AA540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{369B45FD-5C08-4A92-A25F-6A17571AA540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{369B45FD-5C08-4A92-A25F-6A17571AA540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{369B45FD-5C08-4A92-A25F-6A17571AA540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD51ED13-35E8-408D-AE16-6B07BEA233D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD51ED13-35E8-408D-AE16-6B07BEA233D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD51ED13-35E8-408D-AE16-6B07BEA233D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD51ED13-35E8-408D-AE16-6B07BEA233D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7831F92-9BB5-400A-A8EA-1006959DAA71}
+	EndGlobalSection
+EndGlobal

@@ -41,7 +41,7 @@
                                 <div class="col">
                                     <div id="container" class="card" style="display: none;">
                                         <div class="card-header">
-                                            Registers
+                                            Records
                                         </div>
                                         <div id="contentData" class="card-body"></div>
                                     </div>

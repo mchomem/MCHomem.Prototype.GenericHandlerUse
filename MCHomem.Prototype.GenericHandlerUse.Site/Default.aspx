@@ -172,25 +172,28 @@
                     var messageContainer = $('<p></p>');
                     messageContainer.text(message);
 
-                    switch (typeMessage) {
+                    var defaultCss = 'alert mt-2';
+
+                    switch (typeMessage) {                        
+
                         case Default.TypeMessage.INFORMATION:
-                            self.$messageBox.addClass('alert alert-primary');
+                            self.$messageBox.addClass(`${defaultCss} alert-primary`);
                             break;
 
                         case Default.TypeMessage.WARNING:
-                            self.$messageBox.addClass('alert alert-warning');
+                            self.$messageBox.addClass(`${defaultCss} alert-warning`);
                             break;
 
                         case Default.TypeMessage.ERROR:
-                            self.$messageBox.addClass('alert alert-danger');
+                            self.$messageBox.addClass(`${defaultCss} alert-danger`);
                             break;
 
                         case Default.TypeMessage.SUCCESS:
-                            self.$messageBox.addClass('alert alert-success');
+                            self.$messageBox.addClass(`${defaultCss} alert-success`);
                             break;
 
                         default:
-                            self.$messageBox.addClass('alert alert-primary');
+                            self.$messageBox.addClass(`${defaultCss} alert-primary`);
                             break;
                     }
 

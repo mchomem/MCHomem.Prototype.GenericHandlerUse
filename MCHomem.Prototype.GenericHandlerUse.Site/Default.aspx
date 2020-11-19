@@ -29,11 +29,13 @@
                                         <button
                                             id="btnClear"
                                             class="btn btn-sm btn-outline-success"
-                                            type="button">Clear</button>
+                                            type="button">
+                                            Clear</button>
                                         <button
                                             id="btnLoad"
                                             class="btn btn-sm btn-success"
-                                            type="button">Load</button>
+                                            type="button">
+                                            Load</button>
                                     </div>
                                 </div>
                             </div>
@@ -112,9 +114,9 @@
                         .done(function (data, textStatus, jqXHR) {
                             self.$contentData.empty();
 
-                            for (var i = 0; i < data.Peoples.length; i++) {
-                                self.$contentData.append('<b>Name:</b> ' + data.Peoples[i].Name + '<br>');
-                                self.$contentData.append('<b>Birth date:</b> ' + moment(data.Peoples[i].BirthDate).format('DD[/]MM[/]YYYY HH[:]mm[:]ss') + '<br><br>');
+                            for (var i = 0; i < data.Entities.length; i++) {
+                                self.$contentData.append('<b>Name:</b> ' + data.Entities[i].Name + '<br>');
+                                self.$contentData.append('<b>Birth date:</b> ' + moment(data.Entities[i].BirthDate).format('DD[/]MM[/]YYYY HH[:]mm[:]ss') + '<br><br>');
                             }
 
                             MessageBox.show($('#messageBoxContainer'), 'Success!', data.Message, MessageBox.TypeMessage.SUCCESS);

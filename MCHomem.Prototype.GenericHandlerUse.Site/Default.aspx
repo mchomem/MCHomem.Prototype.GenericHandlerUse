@@ -109,7 +109,7 @@
                 , load: function () {
                     $.get({
                         url: 'ashx/AnyService.ashx'
-                        , data: 'op=getPeoples'
+                        , data: 'op=getPeople'
                     })
                         .done(function (data, textStatus, jqXHR) {
                             self.$contentData.empty();

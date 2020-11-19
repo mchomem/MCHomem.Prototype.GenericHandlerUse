@@ -17,15 +17,15 @@ namespace MCHomem.Prototype.GenericHandlerUse.Site.Ashx
 
             switch (op)
             {
-                case "getPeoples":
-                    GetPeoples(context);
+                case "getPeople":
+                    GetPeople(context);
                     break;
                 default:
                     break;
             }
         }
 
-        private void GetPeoples(HttpContext context)
+        private void GetPeople(HttpContext context)
         {
             try
             {

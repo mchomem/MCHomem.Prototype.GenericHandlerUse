@@ -61,25 +61,17 @@
     <script src="Scripts/bootstrap.js"></script>
     <script src="Scripts/popper.js"></script>
     <script src="Scripts/moment.js"></script>
+    <script src="Scripts/controls/message-box.js"></script>
 
     <script type="text/javascript">
 
-        //"Code behind" for javascript
+        // "Code behind" for javascript
         $(document).ready(function () {
 
             // Flat object of static javascript
             Default = {
 
-                // Attribute to behave like an "enum"
-                TypeMessage: {
-                    ERROR: 'Error'
-                    , INFORMATION: 'Information'
-                    , SUCCESS: 'Success'
-                    , WARNING: 'Warning'
-                }
-
-                // Attribute
-                , self: this
+                self: this
 
                 // Initial method
                 , init: function () {
@@ -125,11 +117,11 @@
                                 self.$contentData.append('<b>Birth date:</b> ' + moment(data.Peoples[i].BirthDate).format('DD[/]MM[/]YYYY HH[:]mm[:]ss') + '<br><br>');
                             }
 
-                            Default.showMessageBox('Success!', data.Message, Default.TypeMessage.SUCCESS);
+                            MessageBox.show($('#messageBoxContainer'), 'Success!', data.Message, MessageBox.TypeMessage.SUCCESS);
                             self.$container.attr('style', 'display:block;');
                         })
                         .fail(function (jqXHR, textStatus, errorThrown) {
-                            Default.showMessageBox('Error!', data.Message, Default.TypeMessage.ERROR);
+                            MessageBox.show($('#messageBoxContainer'), 'Error!', data.Message, MessageBox.TypeMessage.ERROR);
                         })
                         .always(function () {
                             self.$contentData.append('Done!');
@@ -139,69 +131,6 @@
                 , clear: function () {
                     self.$contentData.empty();
                     self.messageBoxContainer.empty();
-                }
-
-                // Method for handling a component of the form, in this case a message box.
-                // The idea is to create a component of this part and reference it on a main page
-                // As long as the forms have the container
-                , showMessageBox: function (title, message, typeMessage) {
-
-                    self.messageBoxContainer = $('#messageBoxContainer');
-                    self.messageBoxContainer.empty();
-
-                    self.$messageBox = $('<div></div>');
-                    self.$messageBox.attr('role', 'alert');
-
-                    var crossButtonClose = $('<span></span>');
-                    crossButtonClose.attr('ria-hidden', 'true');
-                    crossButtonClose.html('&times;');
-
-                    var buttonClose = $('<button></button>');
-                    buttonClose.attr('type', 'button');
-                    buttonClose.addClass('close');
-                    buttonClose.attr('data-dismiss', 'alert');
-                    buttonClose.attr('aria-label', 'Close');
-                    buttonClose.append(crossButtonClose);
-
-                    var titleContainer = $('<b></b>');
-                    titleContainer.text(title);
-
-                    var slice = $('<hr>');
-                    slice.addClass('mt-0 mb-2');
-
-                    var messageContainer = $('<p></p>');
-                    messageContainer.text(message);
-
-                    var defaultCss = 'alert mt-2 alert-';
-
-                    switch (typeMessage) {                        
-
-                        case Default.TypeMessage.INFORMATION:
-                            self.$messageBox.addClass(`${defaultCss}primary`);
-                            break;
-
-                        case Default.TypeMessage.WARNING:
-                            self.$messageBox.addClass(`${defaultCss}warning`);
-                            break;
-
-                        case Default.TypeMessage.ERROR:
-                            self.$messageBox.addClass(`${defaultCss}danger`);
-                            break;
-
-                        case Default.TypeMessage.SUCCESS:
-                            self.$messageBox.addClass(`${defaultCss}success`);
-                            break;
-
-                        default:
-                            self.$messageBox.addClass(`${defaultCss}Updaprimary`);
-                            break;
-                    }
-
-                    self.$messageBox.append(titleContainer);
-                    self.$messageBox.append(buttonClose);
-                    self.$messageBox.append(slice);
-                    self.$messageBox.append(messageContainer);
-                    messageBoxContainer.append(self.$messageBox);
                 }
             }
 

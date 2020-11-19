@@ -29,8 +29,8 @@ namespace MCHomem.Prototype.GenericHandlerUse.Site.Ashx
         {
             try
             {
-                JsonReturn<People> jr = new JsonReturn<People>();
-                jr.Entities = new PeopleProvider().MokaData();
+                JsonReturn<Person> jr = new JsonReturn<Person>();
+                jr.Entities = new PersonProvider().MokaData();
                 jr.Message = "Data retreave with success!";
 
                 JavaScriptSerializer js = new JavaScriptSerializer();

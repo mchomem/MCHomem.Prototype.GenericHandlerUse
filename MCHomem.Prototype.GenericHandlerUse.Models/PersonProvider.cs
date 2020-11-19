@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace MCHomem.Prototype.GenericHandlerUse.Models
 {
-    public class PeopleProvider
+    public class PersonProvider
     {
-        public List<People> MokaData()
+        public List<Person> MokaData()
         {
-            List<People> peoples = new List<People>();
+            List<Person> people = new List<Person>();
             Random rYear = new Random();
             Random rMonth = new Random();
             Random rDay = new Random();
@@ -34,9 +34,9 @@ namespace MCHomem.Prototype.GenericHandlerUse.Models
 
             for (int i = 0; i < 5; i++)
             {
-                People people = new People();
-                people.Name = $"{names[n.Next(0, 4)]} {secondNames[sn.Next(0, 4)]}";
-                people.BirthDate =
+                Person person = new Person();
+                person.Name = $"{names[n.Next(0, 4)]} {secondNames[sn.Next(0, 4)]}";
+                person.BirthDate =
                     new DateTime
                     (
                         rYear.Next(1950, 2010)
@@ -47,10 +47,10 @@ namespace MCHomem.Prototype.GenericHandlerUse.Models
                         , rSecond.Next(0, 59)
                     );
 
-                peoples.Add(people);
+                people.Add(person);
             }
 
-            return peoples;
+            return people;
         }
     }
 }

@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="JsonReturn.cs" />
-    <Compile Include="People.cs" />
-    <Compile Include="PeopleProvider.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="PersonProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

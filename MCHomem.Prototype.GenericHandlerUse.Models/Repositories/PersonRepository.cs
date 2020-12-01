@@ -1,10 +1,13 @@
-﻿using System;
+﻿using MCHomem.Prototype.GenericHandlerUse.Models.Entities;
+using System;
 using System.Collections.Generic;
 
-namespace MCHomem.Prototype.GenericHandlerUse.Models
+namespace MCHomem.Prototype.GenericHandlerUse.Models.Repositories
 {
-    public class PersonProvider
+    public class PersonRepository
     {
+        #region Methods
+
         public List<Person> MokaData()
         {
             List<Person> people = new List<Person>();
@@ -25,17 +28,17 @@ namespace MCHomem.Prototype.GenericHandlerUse.Models
             names.Add("Daniel");
             names.Add("Eduardo");
 
-            List<String> secondNames = new List<String>();
-            secondNames.Add("Andrey");
-            secondNames.Add("Bart");
-            secondNames.Add("Casa Grande");
-            secondNames.Add("Dantes");
-            secondNames.Add("Estevão");
+            List<String> lastNames = new List<String>();
+            lastNames.Add("Andrey");
+            lastNames.Add("Bart");
+            lastNames.Add("Casa Grande");
+            lastNames.Add("Dantes");
+            lastNames.Add("Estevão");
 
             for (int i = 0; i < 5; i++)
             {
                 Person person = new Person();
-                person.Name = $"{names[n.Next(0, 4)]} {secondNames[sn.Next(0, 4)]}";
+                person.Name = $"{names[n.Next(0, 4)]} {lastNames[sn.Next(0, 4)]}";
                 person.BirthDate =
                     new DateTime
                     (
@@ -52,5 +55,7 @@ namespace MCHomem.Prototype.GenericHandlerUse.Models
 
             return people;
         }
+
+        #endregion
     }
 }
